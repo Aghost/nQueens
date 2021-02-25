@@ -11,10 +11,7 @@ namespace nQueens
 
 		static void Main(string[] args)
 		{
-			if (args.Length == 1)
-			{
-				int.TryParse(args[0], out n);
-
+			if (args.Length > 0 && int.TryParse(args[0], out n))
 				if (n > 3 && n < 16)
 				{
 					Board = new int[n + 1];
@@ -24,7 +21,6 @@ namespace nQueens
 				{
 					Console.WriteLine("please provide a number > 3 and < 16");
 				}
-			}
 			else
 			{
 				Board = new int[n + 1];
